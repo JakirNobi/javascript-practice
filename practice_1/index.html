@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Practice</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="min-h-screen bg-black">
+    <div id="container" class="flex mt-10 items-baseline gap-10">
+      <button onclick="playGame('rock');">
+        <div
+          id="images1"
+          class="flex flex-col items-center border-[3px] border-white rounded-[100%] p-10"
+        >
+          <img src="images/rock-emoji.png" alt="rock" />
+          <p class="text-slate-400 font-bold text-3xl">Rock</p>
+        </div>
+      </button>
+      <button onclick="playGame('paper');">
+        <div
+          id="images2"
+          class="flex flex-col items-center border-[3px] border-white rounded-[100%] p-10"
+        >
+          <img src="images/paper-emoji.png" alt="paper" />
+          <p class="text-slate-400 font-bold text-3xl">Paper</p>
+        </div>
+      </button>
+      <button onclick="playGame('scissors');">
+        <div
+          id="images3"
+          class="flex flex-col items-center border-[3px] border-white rounded-[100%] p-10"
+        >
+          <img src="images/scissors-emoji.png" alt="scissors" />
+          <p class="text-slate-400 font-bold text-3xl">Scissors</p>
+        </div>
+      </button>
+    </div>
+    <div id="results" class="text-slate-400 flex m-8 gap-6 items-baseline">
+      <p class="js-result"></p>
+      <div class="js-moves flex gap-10"></div>
+      <p class="js-score"></p>
+      <button
+        onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+    "
+        class="reset-score-button bg-purple-500 rounded-lg p-2 mt-2"
+      >
+        Reset Score
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
