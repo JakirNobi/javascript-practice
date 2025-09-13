@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To Do App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="min-h-screen bg-gray-700">
+    <div class="bg-purple-500 p-4">
+      <h1 class="text-3xl">To-Do</h1>
+    </div>
+    <div id="input-container " class="text-slate-500 mx-16 my-6">
+      <input
+        type="text"
+        class="js-input-todo border-[2px] border-slate-50 mr-2 rounded-lg"
+        placeholder="To-Do Item"
+      />
+      <input
+        type="date"
+        class="js-date border-slate-50 border-[2px] mr-2 rounded-lg"
+      />
+      <button
+        onclick="addTodo()"
+        class="bg-purple-500 p-2 rounded-lg text-slate-100"
+      >
+        ADD
+      </button>
+    </div>
+    <div class="mx-16 my-6">
+      <p class="text-3xl text-slate-100">Your To-Do List</p>
+    </div>
+
+    <div id="list-items" class="js-todo-list"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
