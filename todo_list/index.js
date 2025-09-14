@@ -19,7 +19,7 @@ function renderTodoList() {
     //const dueDate = todoObject.dueDate;
     const { name, dueDate } = todoObject;
     const html = `
-    <div class="flex mx-16 my-6 items-baseline">      
+    <div class="flex mx-16 my-6 items-baseline justify-center">      
       <div class="text-slate-100 mr-10">${name}</div>
       <div class="text-slate-100 mr-10 border-slate-50 border-[2px] rounded-lg p-2">${dueDate}</div>
       <button onclick="
